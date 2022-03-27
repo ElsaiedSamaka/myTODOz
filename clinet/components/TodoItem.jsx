@@ -1,4 +1,4 @@
-const TodoItem = ({ title }) => {
+const TodoItem = ({ todo }) => {
   return (
     <div className='row px-3 align-items-center todo-item rounded'>
       <div className='col-auto m-1 p-0 d-flex align-items-center'>
@@ -22,8 +22,8 @@ const TodoItem = ({ title }) => {
           type='text'
           className='form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3'
           readOnly
-          value={title}
-          title={title}
+          value={todo}
+          title={todo}
           onChange=''
         />
       </div>
