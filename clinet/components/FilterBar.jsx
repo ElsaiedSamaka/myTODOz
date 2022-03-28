@@ -3,9 +3,9 @@ const FilterBar = (props) => {
     <div className='row m-1 p-3 px-5 justify-content-start'>
       <div className='col-auto d-flex align-items-center'>
         <label className='text-secondary my-2 pr-2 view-opt-label'>فلتر</label>
-        <select className='custom-select custom-select-sm btn my-2'>
+        <select defaultValue="all" className='custom-select custom-select-sm btn my-2'>
           <option value='all'>الكل</option>
-          <option value='completed' selected>
+          <option value='completed' >
             تم
           </option>
           <option value='active'>بيتعمل</option>
@@ -14,8 +14,8 @@ const FilterBar = (props) => {
       </div>
       <div className='col-auto d-flex align-items-center px-1 pr-3'>
         <label className='text-secondary my-2 pr-2 view-opt-label'>رتب</label>
-        <select className='custom-select custom-select-sm btn my-2'>
-          <option value='added-date-asc' selected>
+        <select defaultValue="added-date-asc" className='custom-select custom-select-sm btn my-2'>
+          <option value='added-date-asc' >
             تاريخ الاضافة
           </option>
           <option value='due-date-desc'>Due date</option>
