@@ -22,9 +22,8 @@ const TodoItem = ({ todo }) => {
           type='text'
           className='form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3'
           readOnly
-          value={todo}
-          title={todo}
-          onChange=''
+          value={todo.todoInput}
+          title={todo.todoInput}
         />
       </div>
       <div className='col-auto m-1 p-0 px-3'>

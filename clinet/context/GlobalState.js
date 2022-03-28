@@ -1,11 +1,11 @@
 import React, { createContext, useReducer } from "react";
+import { ADD_TODO, EDIT_TODO, REMOVE_TODO } from "./Constants";
 import todosReducer from "./TodoReducer";
-
 const initialState = {
   todos: [
     {
       id: 1,
-      content: "Sample todo content",
+      todo: "Sample todo content",
       created_date: Date.now(),
       due_date: Date.now(),
     },
@@ -19,21 +19,21 @@ export const GlobalProvider = ({ children }) => {
 
   function removeTodo(id) {
     dispatch({
-      type: "REMOVE_TODO",
+      type: REMOVE_TODO,
       payload: id,
     });
   }
 
   function addTodo(todo) {
     dispatch({
-      type: "ADD_TODO",
+      type: ADD_TODO,
       payload: todo,
     });
   }
 
   function editTodo(todo) {
     dispatch({
-      type: "EDIT_TODO",
+      type: EDIT_TODO,
       payload: todo,
     });
   }

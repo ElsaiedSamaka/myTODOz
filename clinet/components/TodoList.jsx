@@ -9,7 +9,7 @@ export default function TodoList(props) {
         <ol>
           {todos.map((todo, i) => (
             <li key={todo.id}>
-              <TodoItem todo={todo.content} />
+              <TodoItem todo={todo} />
             </li>
           ))}
         </ol>
