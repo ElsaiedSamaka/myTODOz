@@ -3,12 +3,7 @@ import { ADD_TODO, EDIT_TODO, REMOVE_TODO } from "./Constants";
 import todosReducer from "./TodoReducer";
 const initialState = {
   todos: [
-    {
-      id: 1,
-      todo: "Sample todo content",
-      created_date: Date.now(),
-      due_date: Date.now(),
-    },
+   
   ],
 };
 

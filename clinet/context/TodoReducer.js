@@ -1,4 +1,5 @@
 import { ADD_TODO, REMOVE_TODO } from "./Constants";
+import { generateId } from "./helper";
 export default (state, action) => {
   switch (action.type) {
     case REMOVE_TODO:
@@ -11,7 +12,7 @@ export default (state, action) => {
         ...state,
         todos: [
           ...state.todos,
-          { ...action.payload, id: state.todos[state.todos.length - 1].id + 1 },
+          { ...action.payload, id: generateId( state.todos ), }
         ],
       };
     case "EDIT_TODO":

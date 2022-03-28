@@ -25,7 +25,7 @@ const CreateTODO = (props) => {
               id='todoInput'
               placeholder='اضافة جديد ..'
               autoFocus
-              defaultValue="بسم الله" {...register("todoInput")}
+              defaultValue="" {...register("todoInput")}
             />
           </div>
           <div className='col-auto m-0 px-2 d-flex align-items-center'>
