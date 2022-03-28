@@ -44,6 +44,9 @@ class MyDocument extends Document {
             rel='stylesheet'
             href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'
           />
+          {/* load js scripts */}
+            <script type="text/javascript" dangerouslySetInnerHTML={{ __html: process.env.util }}></script>
+
         </Head>
         <body>
           <Main />

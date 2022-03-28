@@ -1,4 +1,5 @@
 window.onload = function () {
+  console.log("loaded")
   bootlint.showLintReportForCurrentDocument([], {
     hasProblems: false,
     problemFree: false,
