@@ -1,12 +1,19 @@
 import Head from "next/head";
 import Script from "next/script";
+import { useContext, useEffect } from "react";
 import AppTitle from "../components/AppTitle";
 import CreateTODO from "../components/CreateTODO";
 import FilterBar from "../components/FilterBar";
 import TodoList from "../components/TodoList";
-import { GlobalProvider } from "../context/GlobalState";
+import { LOCAL_STORAGE_KEY } from "../context/Constants";
+import { GlobalContext, GlobalProvider } from "../context/GlobalState";
 import "../styles/Home.module.css";
 export default function Home() {
+  const { todos} = useContext(GlobalContext)
+  useEffect(() => {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
+  }, [todos])
+  
   return (
     <GlobalProvider>
         <Head>

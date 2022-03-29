@@ -25,6 +25,11 @@ export default (state, action) => {
           return todo;
         }),
       };
+    case UPDATE_NOTES:
+      return {
+        ...state,
+        notes: action.payload,
+      }
     default:
       return state;
   }
