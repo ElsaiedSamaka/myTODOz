@@ -1,4 +1,6 @@
-const TodoItem = ({ todo }) => {
+import Link from 'next/link';
+
+const TodoItem = ( { todo } ) => {
   return (
     <div className='row px-3 align-items-center todo-item rounded'>
       <div className='col-auto m-1 p-0 d-flex align-items-center'>
@@ -28,7 +30,7 @@ const TodoItem = ({ todo }) => {
       </div>
       <div className='col-auto m-1 p-0 px-3'>
         <div className='row'>
-          <div className='col-auto d-flex align-items-center rounded bg-white border border-warning'>
+          {/* <div className='col-auto d-flex align-items-center rounded bg-white border border-warning'>
             <i
               className='fa fa-hourglass-2 my-2 px-2 text-warning btn'
               data-toggle='tooltip'
@@ -36,20 +38,21 @@ const TodoItem = ({ todo }) => {
               title=''
               data-original-title='Due on date'
             ></i>
-            <h6 className='text my-2 pr-2'>28th Jun 2020</h6>
-          </div>
+            <h6 className='text my-2 pr-2'>28th Jun 2022</h6>
+          </div> */}
         </div>
       </div>
       <div className='col-auto m-1 p-0 todo-actions'>
         <div className='row d-flex align-items-center justify-content-center'>
           <div className='col-auto d-flex '>
             <h5 className='m-0 p-0 px-2'>
+              <Link href="/edit/[id]" as={`/edit/${todo.id}`}>
               <i
                 className='fa fa-pencil text-info btn m-0 p-0'
                 data-toggle='tooltip'
                 data-placement='bottom'
                 title='Edit todo'
-              ></i>
+              ></i></Link>
             </h5>
             <h5 className='m-0 p-0 px-2'>
               <i

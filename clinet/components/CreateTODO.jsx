@@ -16,7 +16,8 @@ const CreateTODO = (props) => {
     <div className='row m-1 p-3'>
       <div className='col col-11 mx-auto'>
         <div className='row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center'>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form className="form-inline" onSubmit={handleSubmit( onSubmit )}>
+            <div className="form-group">
           <div className='col'>
             <input
               className='form-control form-control-lg border-0 add-todo-input bg-transparent rounded'
@@ -35,7 +36,7 @@ const CreateTODO = (props) => {
             >
               ميعاد التنفيذ لم يحدد
             </label>
-            <i
+            {/* <i
               className='fa fa-calendar my-2 px-1 text-primary btn due-date-button'
               data-toggle='tooltip'
               data-placement='bottom'
@@ -50,16 +51,17 @@ const CreateTODO = (props) => {
               title='Clear Due date'
               id='Clear Due date'
               name='Clear Due date'
-            ></i>
+            ></i> */}
           </div>
-          <div className='col-auto px-0 mx-0 mr-2'>
+          {/* <div className='col-auto px-0 mx-0 mr-2'>
             <button
               type='submit'
               className='btn btn-primary'
             >
               اضافة
             </button>
-            </div>
+              </div> */}
+              </div>
             </form>
         </div>
         
