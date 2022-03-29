@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const TodoItem = ( { todo } ) => {
+const TodoItem = ( { todo , onDelete } ) => {
   return (
     <div className='row px-3 align-items-center todo-item rounded'>
       <div className='col-auto m-1 p-0 d-flex align-items-center'>
@@ -24,8 +24,8 @@ const TodoItem = ( { todo } ) => {
           type='text'
           className='form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3'
           readOnly
-          value={todo.todoInput}
-          title={todo.todoInput}
+          value={todo.title}
+          title={todo.title}
         />
       </div>
       <div className='col-auto m-1 p-0 px-3'>
@@ -60,6 +60,7 @@ const TodoItem = ( { todo } ) => {
                 data-toggle='tooltip'
                 data-placement='bottom'
                 title='Delete todo'
+                onClick={()=>onDelete(todo.id)}
               ></i>
             </h5>
           </div>

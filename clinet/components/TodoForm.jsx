@@ -8,7 +8,8 @@ const TodoForm = ({ id, title, content, onSubmit }) => {
   return (
     <div className='container m-5 p-2 rounded mx-auto bg-light shadow'>
       <h1>ايديت تودوز</h1>
-    <form onSubmit={handleSubmit(submit)}>
+      <form onSubmit={handleSubmit( submit )}>
+      <div class="form-group">     
       <label htmlFor="title">Title</label>
       <input
         defaultValue={title}
@@ -18,7 +19,11 @@ const TodoForm = ({ id, title, content, onSubmit }) => {
          {...register("title", { required: true })}
         className="mb-4"
         autoFocus
+        placeholder="Enter Title"
       />
+      </div>
+      <div class="form-group">     
+
       <label htmlFor="content">Content</label>
       <textarea
         defaultValue={content}
@@ -28,11 +33,14 @@ const TodoForm = ({ id, title, content, onSubmit }) => {
         {...register("content", { required: true })}
         className="mb-4"
       ></textarea>
+      </div>
       <button type="submit" className="bg-green-600 text-white">
         Save
-      </button>
+          </button>
+         
       </form>
       </div>
   )
 }
 export default TodoForm
+

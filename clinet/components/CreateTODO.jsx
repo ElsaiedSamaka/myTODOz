@@ -22,11 +22,11 @@ const CreateTODO = (props) => {
             <input
               className='form-control form-control-lg border-0 add-todo-input bg-transparent rounded'
               type='text'
-              name='todoInput'
-              id='todoInput'
+              name='title'
+              id='title'
               placeholder='اضافة جديد ..'
               autoFocus
-              defaultValue="" {...register("todoInput")}
+              defaultValue="" {...register("title")}
             />
           </div>
           <div className='col-auto m-0 px-2 d-flex align-items-center'>
